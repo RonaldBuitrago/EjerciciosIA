@@ -13,6 +13,7 @@ grafo_transporte = {
     'Piloto': [('San Nicolás', 10)],
     'San Nicolás': []
 }
+
 def buscar_ruta(grafo, inicio, fin, ruta_actual=[], tiempo_actual=0):
     """
     Busca todas las rutas posibles usando DFS, considerando solo el tiempo.
@@ -31,3 +32,17 @@ def buscar_ruta(grafo, inicio, fin, ruta_actual=[], tiempo_actual=0):
             )
             rutas.extend(nuevas_rutas)
     return rutas
+
+# Ejemplo de uso
+inicio = 'Terminal paso del comercio'
+fin = 'San Nicolás'
+rutas_posibles = buscar_ruta(grafo_transporte, inicio, fin)
+
+if rutas_posibles:
+    print(f"Rutas posibles de {inicio} a {fin}:")
+    ruta_mas_rapida = min(rutas_posibles, key=lambda x: x[1]) # Encuentra la ruta con el tiempo mínimo
+    for ruta, tiempo in rutas_posibles:
+        print(f"  Ruta: {ruta}, Tiempo: {tiempo} minutos")
+    print(f"\nLa ruta más rápida es: {ruta_mas_rapida[0]}, con un tiempo de {ruta_mas_rapida[1]} minutos.")
+else:
+    print(f"No se encontraron rutas de {inicio} a {fin}.")
