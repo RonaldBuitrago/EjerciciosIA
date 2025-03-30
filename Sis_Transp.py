@@ -13,3 +13,21 @@ grafo_transporte = {
     'Piloto': [('San Nicolás', 10)],
     'San Nicolás': []
 }
+def buscar_ruta(grafo, inicio, fin, ruta_actual=[], tiempo_actual=0):
+    """
+    Busca todas las rutas posibles usando DFS, considerando solo el tiempo.
+    Devuelve una lista de rutas con sus tiempos.
+    """
+    ruta_actual = ruta_actual + [inicio]
+    if inicio == fin:
+        return [(ruta_actual, tiempo_actual)]
+    if inicio not in grafo:
+        return []
+    rutas = []
+    for vecino, tiempo in grafo[inicio]:
+        if vecino not in ruta_actual:
+            nuevas_rutas = buscar_ruta(
+                grafo, vecino, fin, ruta_actual, tiempo_actual + tiempo
+            )
+            rutas.extend(nuevas_rutas)
+    return rutas
