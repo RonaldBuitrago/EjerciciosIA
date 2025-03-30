@@ -1,0 +1,8 @@
+PS C:\Users\VIRUX> & C:/Users/VIRUX/AppData/Local/Programs/Python/Python310/python.exe c:/Users/VIRUX/Downloads/Sis_Transp.py
+Rutas posibles de Terminal paso del comercio a San Nicolás:
+  Ruta: ['Terminal paso del comercio', 'los Alcázares', 'Calima', 'Flora Industrial', 'Rio Cali', 'San Nicolás'], Tiempo: 35 minutos
+  Ruta: ['Terminal paso del comercio', 'los Alcázares', 'Chiminangos', 'Popular', 'Fátima', 'Rio Cali', 'San Nicolás'], Tiempo: 44 minutos
+  Ruta: ['Terminal paso del comercio', 'Salomia', 'Manzanares', 'Piloto', 'San Nicolás'], Tiempo: 36 minutos
+  Ruta: ['Terminal paso del comercio', 'Salomia', 'Piloto', 'San Nicolás'], Tiempo: 25 minutos
+
+La ruta más rápida es: ['Terminal paso del comercio', 'Salomia', 'Piloto', 'San Nicolás'], con un tiempo de 25 minutos.
